@@ -1,0 +1,308 @@
+ <!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours & Horaires - Seïchine Shitoryu Karaté</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/inscription.css">
+</head>
+
+<body>
+    <!-- HEADER & NAVIGATION -->
+    <header>
+        <div class="navbar-container">
+            <a href="../index.html" class="logo">
+                SEÏCHINE
+                <span class="logo-subtitle">SHITORYU KARATÉ</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="a-propos.html">À Propos</a></li>
+                    <li><a href="instructeurs.html">Instructeurs</a></li>
+                    <li><a href="cours.html">Cours & Horaires</a></li>
+                    <li><a href="tarifs.html">Tarifs</a></li>
+                    <li><a href="galerie-photos.html">Galerie</a></li>
+                    <li><a href="actualites.html">Actualités</a></li>
+                    <li><a href="shitoryu.html">Shitoryu</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Cours & Horaires</h1>
+            <p class="hero-subtitle">Trouvez le cours qui vous correspond</p>
+        </div>
+    </section>
+
+    <!-- HORAIRES COMPLETS -->
+    <section>
+        <h2 class="section-title">Planning des Entraînements</h2>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Jours</th>
+                    <th>Horaires</th>
+                    <th>Catégorie</th>
+                    <th>Instructeur</th>
+                    <th>Type de Cours</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Mercredi</strong></td>
+                    <td>14h – 17h</td>
+                    <td>Tous niveaux</td>
+                    <td>Équipe d'instructeurs</td>
+                    <td>Kihon, Kata, Kumite, Préparation physique</td>
+                </tr>
+                <tr>
+                    <td><strong>Samedi</strong></td>
+                    <td>14h – 17h</td>
+                    <td>Tous niveaux</td>
+                    <td>Équipe d'instructeurs</td>
+                    <td>Kihon, Kata, Kumite, Préparation physique</td>
+                </tr>
+                <tr>
+                    <td><strong>Dimanche</strong></td>
+                    <td>08h – 10h</td>
+                    <td>Tous niveaux</td>
+                    <td>Équipe d'instructeurs</td>
+                    <td>Entraînement technique et préparation</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- TYPES DE COURS -->
+    <section style="background-color: #f9f9f9;">
+        <h2 class="section-title">Types de Cours Proposés</h2>
+        <p style="text-align: center; color: #999; margin-bottom: 2rem;"><em>Cliquez sur un type de cours pour en savoir plus</em></p>
+        <div class="grid">
+            <div class="card cours-card" data-cours="kihon" role="button" tabindex="0" aria-pressed="false">
+                <h3 class="card-title">🥋 Kihon (Techniques Fondamentales)</h3>
+                <p class="card-text">
+                    Apprentissage des techniques de base : coups de poing, coups de pied, blocs et déplacements. 
+                    C'est la fondation de tout pratiquant de karaté.
+                </p>
+            </div>
+            <div class="card cours-card" data-cours="kata" role="button" tabindex="0" aria-pressed="false">
+                <h3 class="card-title">🤸 Kata (Formes Codifiées)</h3>
+                <p class="card-text">
+                    Exécution de séquences de mouvements préétablies combinant attaque et défense. 
+                    Développe la précision, le contrôle et la mémorisation.
+                </p>
+            </div>
+            <div class="card cours-card" data-cours="bunkai" role="button" tabindex="0" aria-pressed="false">
+                <h3 class="card-title">💡 Bunkai (Application du Kata)</h3>
+                <p class="card-text">
+                    Compréhension pratique des applications martiales des mouvements du Kata. 
+                    Lie la théorie à la pratique réelle du combat.
+                </p>
+            </div>
+            <div class="card cours-card" data-cours="kumite" role="button" tabindex="0" aria-pressed="false">
+                <h3 class="card-title">🥊 Kumite (Combats Contrôlés)</h3>
+                <p class="card-text">
+                    Entraînement au combat avec un partenaire. Développe la stratégie, la réactivité et la confiance. 
+                    Disponible pour adolescents et adultes.
+                </p>
+            </div>
+            <div class="card cours-card" data-cours="preparation" role="button" tabindex="0" aria-pressed="false">
+                <h3 class="card-title">💪 Préparation Physique</h3>
+                <p class="card-text">
+                    Renforcement musculaire, flexibilité et endurance. Essentiel pour les compétiteurs 
+                    et pratiquants avancés.
+                </p>
+            </div>
+            <div class="card cours-card" data-cours="selfdefense" role="button" tabindex="0" aria-pressed="false">
+                <h3 class="card-title">🛡️ Self-Défense Pratique</h3>
+                <p class="card-text">
+                    Application du karaté à des situations réelles. Apprentissage de techniques de défense 
+                    applicable au quotidien.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COURS MODAL -->
+    <div class="cours-modal" aria-hidden="true" aria-modal="true" role="dialog">
+        <div class="cours-modal-backdrop"></div>
+        <div class="cours-modal-panel">
+            <button class="cours-close" aria-label="Fermer">&times;</button>
+            <h3 class="cours-title"></h3>
+            <div class="cours-content"></div>
+            <div class="cours-footer">Cliquez ailleurs ou appuyez sur Échap pour fermer</div>
+        </div>
+    </div>
+    </section>
+
+    <!-- CATÉGORIES D'ÂGE DÉTAILLÉES -->
+    <section>
+        <h2 class="section-title">Catégories d'Âge & Programmes</h2>
+        
+        <div style="margin-bottom: 3rem;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 3px solid #ff0000;">
+                🧒 Petits Samouraïs (4–6 ans)
+            </h3>
+            <p style="color: #666; line-height: 1.8; margin-bottom: 1rem;">
+                Cours ludique et progressif adapté aux plus jeunes. L'objectif principal est d'introduire les bases du karaté 
+                dans une atmosphère amusante et encourageante.
+            </p>
+            <div style="background-color: #f9f9f9; padding: 1.5rem; border-radius: 8px;">
+                <p><strong>Contenu :</strong></p>
+                <ul style="color: #666; margin-left: 1.5rem; margin-top: 0.5rem;">
+                    <li>Mouvements fondamentaux simples</li>
+                    <li>Développement de la coordination et de l'équilibre</li>
+                    <li>Jeux et exercices ludiques</li>
+                    <li>Introduction à la discipline et au respect</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 3rem;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 3px solid #ff0000;">
+                👶 Enfants (7–12 ans)
+            </h3>
+            <p style="color: #666; line-height: 1.8; margin-bottom: 1rem;">
+                Programme structuré axé sur l'apprentissage des techniques et l'intériorisation des valeurs du karaté.
+            </p>
+            <div style="background-color: #f9f9f9; padding: 1.5rem; border-radius: 8px;">
+                <p><strong>Contenu :</strong></p>
+                <ul style="color: #666; margin-left: 1.5rem; margin-top: 0.5rem;">
+                    <li>Kihon (techniques fondamentales)</li>
+                    <li>Kata (formes préétablies)</li>
+                    <li>Exercices de Kumite léger</li>
+                    <li>Entraînement à la discipline et au respect</li>
+                    <li>Progression vers les grades (ceintures)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 3rem;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 3px solid #ff0000;">
+                👦 Adolescents (13–17 ans)
+            </h3>
+            <p style="color: #666; line-height: 1.8; margin-bottom: 1rem;">
+                Approfondissement technique et introduction à la compétition pour ceux qui le souhaitent.
+            </p>
+            <div style="background-color: #f9f9f9; padding: 1.5rem; border-radius: 8px;">
+                <p><strong>Contenu :</strong></p>
+                <ul style="color: #666; margin-left: 1.5rem; margin-top: 0.5rem;">
+                    <li>Kihon avancé</li>
+                    <li>Kata et Bunkai (application)</li>
+                    <li>Kumite structuré</li>
+                    <li>Préparation physique</li>
+                    <li>Formation de futurs compétiteurs</li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 3px solid #ff0000;">
+                🔴 Adultes & Compétiteurs (18 ans et plus)
+            </h3>
+            <p style="color: #666; line-height: 1.8; margin-bottom: 1rem;">
+                Cours avancés mêlant technique, compétition et maîtrise. Pour les adultes souhaitant progresser 
+                ou se préparer aux compétitions.
+            </p>
+            <div style="background-color: #f9f9f9; padding: 1.5rem; border-radius: 8px;">
+                <p><strong>Contenu :</strong></p>
+                <ul style="color: #666; margin-left: 1.5rem; margin-top: 0.5rem;">
+                    <li>Techniques avancées du Shitoryu</li>
+                    <li>Kata sophistiqués et applications</li>
+                    <li>Kumite compétitif</li>
+                    <li>Préparation physique intensive</li>
+                    <li>Stratégie de compétition</li>
+                    <li>Self-défense avancée</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXAMENS ET GRADES -->
+    <section style="background-color: #f9f9f9;">
+        <h2 class="section-title">Examens & Progression des Grades</h2>
+        <p style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 2rem;">
+            Les élèves progressent à travers une série de ceintures, chaque examen marquant une étape de leur développement.
+        </p>
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="background-color: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <p style="color: #666; margin-bottom: 1rem;">
+                    <strong>Fréquence des examens :</strong> Les examens de grade se déroulent à la fin de chaque trimestre.
+                </p>
+                <p style="color: #666; margin-bottom: 1rem;">
+                    <strong>Critères d'évaluation :</strong> Maîtrise technique, compréhension des katas, comportement, 
+                    assiduité et progression.
+                </p>
+                <p style="color: #666;">
+                    <strong>Accompagnement :</strong> Nos instructeurs vous guident personnellement vers chaque examen, 
+                    en mettant l'accent sur votre progression réelle et non sur la vitesse.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="text-align: center;">
+        <h2 class="section-title">Prêt à Commencer ?</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #666;">
+            Choisissez votre catégorie et commencez votre parcours de karaté.
+        </p>
+        <button class="cta-button inscription-btn">S'inscrire</button>
+        <a href="contact.html" class="cta-button cta-button-secondary" style="margin-left: 1rem;">Nous contacter</a>
+    </section>
+
+    <!-- FOOTER -->
+    <script src="../assets/js/cours.js"></script>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SEÏCHINE KARATÉ</h3>
+                <p>Dojo de karaté Shitoryu traditionnel à Korhogo.</p>
+                <p style="font-size: 0.9rem; color: #999; margin-top: 1rem;">
+                    📍 Korhogo, Nouveau Quartier<br>
+                    🇨🇮 Côte d'Ivoire
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens Rapides</h3>
+                <ul>
+                    <li><a href="a-propos.html">À Propos</a></li>
+                    <li><a href="cours.html">Cours & Horaires</a></li>
+                    <li><a href="tarifs.html">Tarifs & Inscription</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>📱 WhatsApp: <a href="https://wa.me/2250508240708">05 08 24 07 08</a></p>
+                <p>📧 Email: <a href="mailto:liondeviendraroi@gmail.com">liondeviendraroi@gmail.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Horaires</h3>
+                <ul>
+                    <li>Mercredi: 14h–17h00</li>
+                    <li>Samedi: 14h–17h00</li>
+                    <li>Dimanche: 8h–10h30</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Seïchine Shitoryu Karaté. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="../assets/js/inscription.js"></script>
+</body>
+
+</html>

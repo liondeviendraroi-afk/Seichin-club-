@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide d'Utilisation - Seïchine Shitoryu Karaté</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1a1a1a;
+            border-bottom: 3px solid #ff0000;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #ff0000;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        h3 {
+            color: #1a1a1a;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+        .info-box {
+            background-color: #f9f9f9;
+            border-left: 4px solid #ff0000;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .warning {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .success {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #1a1a1a;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>📖 Guide Complet - Site Seïchine Shitoryu Karaté</h1>
+
+        <div class="success">
+            <strong>✅ Bienvenue !</strong> Ce guide vous aidera à gérer et personnaliser votre site web.
+        </div>
+
+        <h2>1. Structure du Projet</h2>
+        <p>Voici comment le projet est organisé :</p>
+        <pre style="background-color: #f0f0f0; padding: 15px; border-radius: 5px; overflow-x: auto;">
+Seichin Club/
+├── index.html
+├── README.md
+├── GUIDE.html
+├── assets/
+│   ├── css/style.css
+│   ├── js/main.js
+│   └── img/          (Vos photos ici)
+└── pages/
+    ├── a-propos.html
+    ├── instructeurs.html
+    ├── cours.html
+    ├── tarifs.html
+    ├── galerie-photos.html
+    ├── galerie-videos.html
+    ├── actualites.html
+    ├── shitoryu.html
+    ├── faq.html
+    └── contact.html
+        </pre>
+
+        <h2>2. Comment Ajouter/Modifier le Contenu</h2>
+
+        <h3>📰 Ajouter une Actualité</h3>
+        <ol>
+            <li>Ouvrez <code>pages/actualites.html</code></li>
+            <li>Trouvez la section "Dernières Annonces"</li>
+            <li>Copiez un élément <code>.news-item</code></li>
+            <li>Modifiez la date et le contenu</li>
+            <li>Placez-le en haut pour les nouvelles les plus récentes</li>
+        </ol>
+
+        <h3>👥 Modifier un Instructeur</h3>
+        <ol>
+            <li>Ouvrez <code>pages/instructeurs.html</code></li>
+            <li>Trouvez le nom de l'instructeur</li>
+            <li>Modifiez la ceinture, la description et les domaines</li>
+            <li>Changez aussi le footer s'il y a des infos de contact</li>
+        </ol>
+
+        <h3>⏰ Modifier les Horaires</h3>
+        <p><strong>Les horaires sont dans 3 endroits !</strong> Modifiez-les partout :</p>
+        <ul>
+            <li><code>index.html</code> - Section "Horaires rapides"</li>
+            <li><code>pages/cours.html</code> - Tableau principal</li>
+            <li><code>pages/contact.html</code> - Tableau horaires</li>
+            <li>Tous les footers (fin de chaque page)</li>
+        </ul>
+
+        <h3>💰 Modifier les Tarifs</h3>
+        <ol>
+            <li>Ouvrez <code>pages/tarifs.html</code></li>
+            <li>Trouvez la section "Nos Tarifs"</li>
+            <li>Modifiez les 3 cartes de prix (mensuel, trimestriel, annuel)</li>
+            <li>Vérifiez aussi la section "Documents Requis" si nécessaire</li>
+        </ol>
+
+        <h3>🖼️ Ajouter des Photos à la Galerie</h3>
+        <ol>
+            <li>Créez un dossier <code>assets/img/</code> s'il n'existe pas</li>
+            <li>Placez vos photos (.jpg, .png) dans ce dossier</li>
+            <li>Ouvrez <code>pages/galerie-photos.html</code></li>
+            <li>Remplacez les placeholders par vos images :</li>
+        </ol>
+        <pre style="background-color: #f0f0f0; padding: 15px; border-radius: 5px;">
+&lt;div class="gallery-item"&gt;
+    &lt;img src="../assets/img/ma-photo.jpg" alt="Description"&gt;
+&lt;/div&gt;
+        </pre>
+
+        <h3>🎥 Ajouter des Vidéos YouTube</h3>
+        <ol>
+            <li>Trouvez l'ID de la vidéo YouTube (après "v=" dans l'URL)</li>
+            <li>Ouvrez <code>pages/galerie-videos.html</code></li>
+            <li>Remplacez l'ID dans les iframes :</li>
+        </ol>
+        <pre style="background-color: #f0f0f0; padding: 15px; border-radius: 5px;">
+&lt;iframe src="https://www.youtube.com/embed/VOTRE_ID_VIDEO?rel=0"&gt;
+&lt;/iframe&gt;
+        </pre>
+
+        <h2>3. Personnalisation du Design</h2>
+
+        <h3>🎨 Changer les Couleurs</h3>
+        <p>Ouvrez <code>assets/css/style.css</code> et modifiez ces variables :</p>
+        <pre style="background-color: #f0f0f0; padding: 15px; border-radius: 5px;">
+:root {
+    --primary-color: #1a1a1a;      /* Noir */
+    --secondary-color: #ff0000;    /* Rouge */
+    --accent-color: #ffffff;       /* Blanc */
+    --text-dark: #2c2c2c;
+    --text-light: #666666;
+}
+        </pre>
+
+        <h3>✏️ Changer les Polices</h3>
+        <pre style="background-color: #f0f0f0; padding: 15px; border-radius: 5px;">
+--font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+--font-accent: 'Georgia', serif;
+        </pre>
+
+        <h3>📐 Modifier la Largeur du Site</h3>
+        <p>Dans <code>style.css</code>, cherchez <code>max-width</code> et changez la valeur (actuellement 1200px)</p>
+
+        <h2>4. Informations de Contact à Mettre à Jour</h2>
+        <table>
+            <tr>
+                <th>Information</th>
+                <th>Valeur Actuelle</th>
+                <th>À Remplacer Par</th>
+            </tr>
+            <tr>
+                <td>Numéro WhatsApp</td>
+                <td>07 07 00 00</td>
+                <td>Votre numéro</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>seichine.karate@gmail.com</td>
+                <td>Votre email</td>
+            </tr>
+            <tr>
+                <td>Localisation</td>
+                <td>Korhogo, Quartier 14</td>
+                <td>Votre adresse</td>
+            </tr>
+            <tr>
+                <td>Nom du Dojo</td>
+                <td>SEÏCHINE</td>
+                <td>Votre nom</td>
+            </tr>
+        </table>
+
+        <div class="warning">
+            <strong>⚠️ Important :</strong> Utilisez Ctrl+H (Remplacer) dans votre éditeur de texte 
+            pour remplacer rapidement ces valeurs dans tous les fichiers.
+        </div>
+
+        <h2>5. FAQ - Questions Fréquentes</h2>
+
+        <h3>Comment ajouter une question à la FAQ ?</h3>
+        <ol>
+            <li>Ouvrez <code>pages/faq.html</code></li>
+            <li>Dupliquez un élément <code>.faq-item</code></li>
+            <li>Modifiez la question et la réponse</li>
+            <li>Testez que l'accordéon fonctionne</li>
+        </ol>
+
+        <h3>Comment tester le site localement ?</h3>
+        <p>Vous avez plusieurs options :</p>
+        <ul>
+            <li><strong>Ouvrir le fichier :</strong> Double-cliquez sur <code>index.html</code></li>
+            <li><strong>Avec Live Server (VS Code) :</strong> Clic droit → "Open with Live Server"</li>
+            <li><strong>Avec Python :</strong> <code>python -m http.server 8000</code> puis allez à <code>localhost:8000</code></li>
+        </ul>
+
+        <h3>Le menu mobile n'apparaît pas ?</h3>
+        <p>Assurez-vous que le fichier <code>assets/js/main.js</code> est présent et chargé. 
+        Vérifiez aussi que votre écran est assez petit (moins de 768px de large).</p>
+
+        <h3>Les vidéos YouTube n'apparaissent pas ?</h3>
+        <p>Vérifiez que :</p>
+        <ul>
+            <li>L'ID de la vidéo est correct</li>
+            <li>La vidéo n'est pas privée</li>
+            <li>L'URL est au format <code>https://www.youtube.com/embed/ID</code></li>
+        </ul>
+
+        <h2>6. Déploiement (Mise en Ligne)</h2>
+
+        <h3>Option 1 : Netlify (Recommandé - Gratuit)</h3>
+        <ol>
+            <li>Allez sur <a href="https://netlify.com" target="_blank">netlify.com</a></li>
+            <li>Cliquez "Create new site" ou connectez votre GitHub</li>
+            <li>Glissez-déposez le dossier <code>Seichin Club/</code></li>
+            <li>Votre site est en ligne en 2 minutes !</li>
+        </ol>
+
+        <h3>Option 2 : GitHub Pages (Gratuit)</h3>
+        <ol>
+            <li>Créez un repo GitHub public</li>
+            <li>Uploadez les fichiers</li>
+            <li>Allez à Settings → Pages → branch main</li>
+            <li>Votre site sera à <code>username.github.io/repository</code></li>
+        </ol>
+
+        <h3>Option 3 : Hébergement Payant</h3>
+        <p>Si vous achetez un hébergement (OVH, Namecheap, etc.) :</p>
+        <ol>
+            <li>Connectez-vous au FTP</li>
+            <li>Uploadez tous les fichiers (en gardant la structure)</li>
+            <li>C'est prêt !</li>
+        </ol>
+
+        <div class="success">
+            <strong>✅ Le site ne nécessite aucune base de données</strong> - C'est un site statique !
+        </div>
+
+        <h2>7. Bonnes Pratiques</h2>
+
+        <ul>
+            <li>✅ Testez votre site sur mobile avant de le mettre en ligne</li>
+            <li>✅ Mettez à jour les actualités régulièrement</li>
+            <li>✅ Vérifiez les liens internes (Ctrl+F pour chercher les erreurs)</li>
+            <li>✅ Optimisez les photos (moins de 2MB par image)</li>
+            <li>✅ Gardez le dossier en sauvegarde</li>
+            <li>✅ Mettez à jour le footer si la date change</li>
+            <li>✅ Testez le formulaire de contact régulièrement</li>
+        </ul>
+
+        <h2>8. Support & Aide</h2>
+
+        <p>Si vous avez besoin d'aide :</p>
+        <ul>
+            <li>📧 Contactez votre webmaster/développeur</li>
+            <li>🔍 Cherchez dans le README.md</li>
+            <li>💻 Utilisez les outils de développement du navigateur (F12)</li>
+            <li>🌐 Consultez <a href="https://stackoverflow.com" target="_blank">Stack Overflow</a> pour les questions techniques</li>
+        </ul>
+
+        <h2>9. Checklist de Maintenance</h2>
+
+        <div class="info-box">
+            <strong>À faire régulièrement :</strong>
+            <ul>
+                <li>☐ Ajouter une actualité (hebdomadaire)</li>
+                <li>☐ Vérifier les liens de contact (mensuels)</li>
+                <li>☐ Mettre à jour les photos (mensuels)</li>
+                <li>☐ Tester le formulaire (mensuels)</li>
+                <li>☐ Vérifier les horaires (si changement)</li>
+                <li>☐ Sauvegarder les fichiers (mensuels)</li>
+                <li>☐ Vérifier les performances (trimestriels)</li>
+                <li>☐ Mettre à jour la date du copyright (annuels)</li>
+            </ul>
+        </div>
+
+        <h2>10. Ressources Utiles</h2>
+
+        <ul>
+            <li><a href="https://www.w3schools.com/html/" target="_blank">HTML Tutorial (W3Schools)</a></li>
+            <li><a href="https://www.w3schools.com/css/" target="_blank">CSS Tutorial (W3Schools)</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript Docs (MDN)</a></li>
+            <li><a href="https://www.google.com/maps/" target="_blank">Google Maps</a></li>
+            <li><a href="https://tinypng.com/" target="_blank">Compresser les images (TinyPNG)</a></li>
+            <li><a href="https://www.canva.com/" target="_blank">Créer des graphiques (Canva)</a></li>
+        </ul>
+
+        <footer>
+            <p>&copy; 2025 Seïchine Shitoryu Karaté - Guide de Maintenance</p>
+            <p>Pour toute question, contactez le webmaster 📧</p>
+        </footer>
+    </div>
+</body>
+
+</html>

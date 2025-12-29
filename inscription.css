@@ -1,0 +1,351 @@
+/* ============================================================
+   FORMULAIRE D'INSCRIPTION
+   ============================================================ */
+
+.inscription-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1998;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.inscription-backdrop.show {
+    display: block;
+    opacity: 1;
+}
+
+.inscription-modal {
+    position: fixed;
+    /* anchor near top so tall content stays visible and scrolls internally */
+    top: 5vh;
+    left: 50%;
+    transform: translateX(-50%) scale(0.9);
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+    z-index: 1999;
+    display: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.inscription-modal.show {
+    display: flex;
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+.inscription-modal-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.inscription-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    z-index: 2000;
+    font-weight: bold;
+}
+
+.inscription-close-btn:hover {
+    background-color: #fff0f0;
+    color: #cc0000;
+    transform: scale(1.1);
+}
+
+.inscription-close-btn:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.inscription-modal-header {
+    padding: 2rem 2rem 1rem 2rem;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    color: white;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.inscription-modal-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.inscription-modal-header p {
+    font-size: 0.95rem;
+    color: #ddd;
+}
+
+.inscription-form {
+    padding: 2rem;
+    overflow-y: auto;
+    flex: 1;
+    /* Ensure internal scrolling when modal is near-viewport height */
+    max-height: calc(90vh - 160px);
+}
+
+.inscription-form fieldset {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border: none;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.inscription-form fieldset:last-of-type {
+    border-bottom: none;
+}
+
+.inscription-form legend {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: 0.8rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    color: var(--text-dark);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-group.checkbox {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.form-group.checkbox input {
+    width: 20px;
+    height: 20px;
+    margin-top: 0.2rem;
+    margin-right: 0.8rem;
+    cursor: pointer;
+}
+
+.form-group.checkbox label {
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #f0f0f0;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #cc0000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background-color: #f0f0f0;
+    color: var(--text-dark);
+    border: 2px solid #e0e0e0;
+}
+
+.btn-secondary:hover {
+    background-color: #e0e0e0;
+    border-color: #d0d0d0;
+}
+
+/* Message de succès */
+.success-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4caf50;
+    color: white;
+    padding: 2rem 3rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    z-index: 2001;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Scrollbar pour le formulaire */
+.inscription-form::-webkit-scrollbar {
+    width: 10px;
+}
+
+.inscription-form::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.inscription-form::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 5px;
+}
+
+.inscription-form::-webkit-scrollbar-thumb:hover {
+    background: #cc0000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .inscription-modal {
+        width: 95%;
+        max-height: 95vh;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .inscription-modal-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .inscription-form {
+        padding: 1.5rem;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .inscription-modal {
+        width: 98%;
+    }
+
+    .inscription-modal-header {
+        padding: 1.5rem;
+    }
+
+    .inscription-modal-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .inscription-form {
+        padding: 1rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
